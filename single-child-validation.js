@@ -8,9 +8,15 @@ var MyComponent = React.createClass({
         myProp2: React.PropTypes.string
     },
 
+    getDefaultProps: function() {
+        return {
+            value: 'default value'
+        };
+    },
+
     render: function () {
         return (
-            <div>
+            <div title={this.props.value}>
                 {this.props.children}
             </div>
         );
