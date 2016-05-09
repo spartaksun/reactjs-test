@@ -3,7 +3,9 @@
  */
 var MyComponent = React.createClass({
     propTypes: {
-        children: React.PropTypes.element.isRequired
+        children: React.PropTypes.element.isRequired,
+        myProp: React.PropTypes.array,
+        myProp2: React.PropTypes.string
     },
 
     render: function () {
@@ -17,9 +19,8 @@ var MyComponent = React.createClass({
 });
 
 ReactDOM.render(
-    <MyComponent>
+    <MyComponent myProp={'tytytyty'} myProp2={['kkkk', 4,5,6]}>
         <div>ttt</div>
-        <div>ttt2</div>
     </MyComponent>,
     document.getElementById('example')
 );
